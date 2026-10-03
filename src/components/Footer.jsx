@@ -1,5 +1,6 @@
 import { ArrowUpRight, MapPin, Phone, Globe, Heart } from 'lucide-react';
 import { NAV_LINKS, WHATSAPP_NUMBER_DISPLAY, WHATSAPP_LINK, PHONE_LINK } from '../data/site';
+import logo from '../assets/logo.png';
 
 const SERVICE_LINKS = [
   'Website Design',
@@ -13,16 +14,8 @@ export default function Footer() {
     <footer className="relative border-t border-white/[0.06] bg-ink-900/60">
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:py-20">
         <div className="lg:col-span-1">
-          <a href="#home" className="flex items-center gap-2.5" aria-label="Neet Creatives home">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 font-display text-lg font-bold">
-              N
-            </span>
-            <span className="font-display text-lg font-bold leading-none tracking-tight">
-              NEET
-              <span className="block text-[11px] font-medium tracking-[0.3em] text-white/50">
-                CREATIVES
-              </span>
-            </span>
+          <a href="#home" className="inline-flex items-center" aria-label="Neet Creatives home">
+            <img src={logo} alt="Neet Creatives logo" className="h-12 w-auto object-contain" />
           </a>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/50">
             Creative ideas. Digital experiences. Business growth.

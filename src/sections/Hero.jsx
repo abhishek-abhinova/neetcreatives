@@ -1,109 +1,159 @@
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
-import { useRef } from 'react';
-import HeroScene from '../components/HeroScene';
-import { waLinkWithMessage } from '../data/site';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, Monitor, Palette, Share2, Sparkles, Target } from 'lucide-react';
+import { STATS, waLinkWithMessage } from '../data/site';
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12, delayChildren: 0.15 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 34 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] } },
-};
+const floatingCards = [
+  {
+    Icon: Monitor,
+    title: 'Website',
+    subtitle: 'Modern & Responsive',
+    tone: 'from-violet-500/20 to-cyan-400/20',
+    iconClass: 'text-violet-400',
+    wrapperClass: 'relative',
+  },
+  {
+    Icon: Share2,
+    title: 'Social Growth',
+    subtitle: 'Audience Growth',
+    tone: 'from-violet-500/20 to-blue-500/20',
+    iconClass: 'text-violet-400',
+    wrapperClass: 'absolute right-0 top-10',
+  },
+  {
+    Icon: Target,
+    title: 'Meta Ads',
+    subtitle: 'Campaigns Live',
+    tone: 'from-red-500/20 to-orange-500/20',
+    iconClass: 'text-red-400',
+    wrapperClass: 'absolute bottom-10 left-0',
+  },
+  {
+    Icon: Palette,
+    title: 'Creative Design',
+    subtitle: 'Brand Visuals',
+    tone: 'from-pink-500/20 to-purple-500/20',
+    iconClass: 'text-pink-400',
+    wrapperClass: 'absolute bottom-10 left-10',
+  },
+];
 
 export default function Hero() {
   const reduce = useReducedMotion();
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 120]);
-  const fade = useTransform(scrollYProgress, [0, 0.7], [1, reduce ? 1 : 0]);
 
   return (
-    <section id="home" ref={ref} className="noise relative overflow-hidden pt-[72px]">
-      <motion.div style={{ y: bgY, opacity: fade }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-grid-faint [background-size:56px_56px] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_35%,#000,transparent)]" />
-        <div className="absolute -left-40 top-10 h-[480px] w-[480px] rounded-full bg-violet-700/20 blur-[130px] animate-blob" />
-        <div
-          className="absolute -right-32 top-64 h-[420px] w-[420px] rounded-full bg-cyan-500/15 blur-[120px] animate-blob"
-          style={{ animationDelay: '-6s' }}
-        />
-        <div
-          className="absolute bottom-0 left-1/3 h-[380px] w-[380px] rounded-full bg-blue-600/15 blur-[120px] animate-blob"
-          style={{ animationDelay: '-12s' }}
-        />
+    <section
+      id="home"
+      className="relative min-h-screen overflow-hidden bg-ink-950"
+      style={{
+        backgroundImage: "url('/assets/homepage.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <motion.div
+        className="absolute inset-0"
+        animate={{ opacity: reduce ? 1 : [0, 1, 1] }}
+        transition={{ duration: 1.5, delay: 0.3 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-900/90 to-ink-950/95" />
       </motion.div>
 
-      <div className="container-x relative grid min-h-[calc(100vh-72px)] items-center gap-10 py-14 lg:grid-cols-2 lg:gap-6 lg:py-8">
-        <div className="max-w-2xl">
-          <motion.div variants={container} initial="hidden" animate="show">
-            <motion.div variants={item}>
-              <span className="section-tag">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
-                </span>
-                Digital Creative Agency — Garhwa, Jharkhand
+      <div className="relative flex min-h-screen items-center justify-center px-6 pt-[72px] lg:px-10">
+        <div className="container-x grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2">
+          <div className="lg:pt-20">
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-gradient-to-br from-violet-500/30 to-cyan-400/30 px-4 py-2 text-[10px] font-medium uppercase tracking-wider text-violet-300">
+                <svg width={14} height={14} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 11L22 15.03L15.09 22L12 19.74L9 22L2.91 15.03L7 11L2 9.27L13.91 8.26L12 2Z" />
+                </svg>
+                DIGITAL CREATIVE AGENCY
               </span>
             </motion.div>
 
-            <motion.h1
-              variants={item}
-              className="mt-7 font-display text-[2.65rem] font-bold leading-[1.04] tracking-tight sm:text-6xl lg:text-[4.35rem]"
-            >
-              WE MAKE BRANDS
-              <span className="text-gradient animate-gradient-x block">
-                IMPOSSIBLE TO IGNORE.
-              </span>
-            </motion.h1>
+            <motion.div initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }}>
+              <h1 className="mb-5 font-display text-[2.8rem] font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                WE MAKE
+                <span className="relative mt-2 block text-violet-300">BRANDS</span>
+                <span className="block">IMPOSSIBLE TO IGNORE.</span>
+              </h1>
 
-            <motion.p variants={item} className="mt-6 text-base font-medium text-white/70 sm:text-lg">
-              Websites, social media, graphics &amp; Meta advertising that turn attention into
-              growth.
-            </motion.p>
+              <p className="mb-8 max-w-xl text-lg font-medium leading-relaxed text-white/60">
+                We design websites, create scroll-stopping content and run targeted digital campaigns
+                that help businesses build a stronger online presence.
+              </p>
 
-            <motion.p variants={item} className="mt-3 max-w-xl text-[15px] leading-relaxed text-white/50">
-              Neet Creatives helps businesses build a powerful digital presence through creative
-              design, social media marketing and performance-driven advertising.
-            </motion.p>
+              <div className="mb-8 flex flex-col gap-3 sm:flex-row">
+                <motion.a
+                  href={waLinkWithMessage("Hello Neet Creatives! I'd like to start a project.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary group inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  Start Your Project
+                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                </motion.a>
 
-            <motion.div variants={item} className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <a
-                href={waLinkWithMessage("Hello Neet Creatives! I'd like to start a project.")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary group"
+                <motion.a
+                  href="#services"
+                  className="btn-ghost group inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.35 }}
+                >
+                  Explore Our Services
+                  <Sparkles size={14} className="text-violet-300 transition-transform duration-300 group-hover:rotate-12" />
+                </motion.a>
+              </div>
+
+              <p className="text-sm leading-relaxed text-white/50">Garhwa Town, Jharkhand</p>
+            </motion.div>
+
+            <p className="mt-8 text-sm leading-relaxed text-white/40">
+              Web Design • Graphic Design • Social Media • Meta Ads
+            </p>
+          </div>
+
+          <div className="relative lg:-mt-20">
+            {floatingCards.map(({ Icon, title, subtitle, tone, iconClass, wrapperClass }, index) => (
+              <motion.div
+                key={title}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                className={`${wrapperClass} group`}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 + index * 0.1 }}
               >
-                Start Your Project
-                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
-              <a href="#services" className="btn-ghost group">
-                Explore Services
-                <Sparkles size={15} className="text-violet-300 transition-transform duration-300 group-hover:rotate-12" />
-              </a>
-            </motion.div>
-
-            <motion.div
-              variants={item}
-              className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4"
-            >
-              {[
-                { v: '50+', l: 'Projects' },
-                { v: '25+', l: 'Businesses' },
-                { v: '100%', l: 'Commitment' },
-              ].map((s) => (
-                <div key={s.l}>
-                  <p className="font-display text-2xl font-bold text-white">{s.v}</p>
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/40">{s.l}</p>
+                <div className="glass rounded-2xl border border-white/10 p-5 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+                  <div className={`mb-3 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br ${tone}`}>
+                    <Icon className={iconClass} size={28} />
+                  </div>
+                  <h3 className="font-display text-xs font-semibold uppercase tracking-wider text-white/90">
+                    {title}
+                  </h3>
+                  <p className="mt-1 text-sm text-white/50">{subtitle}</p>
                 </div>
-              ))}
-            </motion.div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
+      </div>
 
-        <HeroScene />
+      <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-ink-950/80 backdrop-blur-md">
+        <div className="container-x grid grid-cols-2 gap-4 py-4 sm:grid-cols-4">
+          {STATS.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="font-display text-2xl font-bold text-white">
+                {stat.value}
+                {stat.suffix}
+              </div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/40">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

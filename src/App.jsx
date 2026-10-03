@@ -4,7 +4,7 @@ import WhatsAppFloat from './components/WhatsAppFloat';
 import MobileCTA from './components/MobileCTA';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
-import Marquee from './sections/Marquee';
+import HeroPost from './sections/HeroPost';
 import Services from './sections/Services';
 import Specialties from './sections/Specialties';
 import WhyUs from './sections/WhyUs';
@@ -31,7 +31,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Marquee />
+        <HeroPost />
         <Services />
         <Specialties />
         <WhyUs />
