@@ -8,6 +8,7 @@ import HeroPost from './sections/HeroPost';
 import Services from './sections/Services';
 import Specialties from './sections/Specialties';
 import WhyUs from './sections/WhyUs';
+import AboutViz from './sections/AboutViz';
 import About from './sections/About';
 import Portfolio from './sections/Portfolio';
 import Showcase from './sections/Showcase';
@@ -35,6 +36,7 @@ export default function App() {
         <Services />
         <Specialties />
         <WhyUs />
+        <AboutViz />
         <About />
         <Portfolio />
         <Showcase />
