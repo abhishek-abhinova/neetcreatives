@@ -6,6 +6,7 @@ import {
   Wallet,
   Zap,
   MapPin,
+  MessageCircle,
 } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import { WHY_US } from '../data/site';
@@ -17,6 +18,7 @@ const ICONS = {
   wallet: Wallet,
   zap: Zap,
   'map-pin': MapPin,
+  'message-circle': MessageCircle,
 };
 
 export default function WhyUs() {
@@ -31,7 +33,8 @@ export default function WhyUs() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
-              WHY BRANDS CHOOSE <span className="text-gradient">NEET CREATIVES</span>
+              CREATIVE THINKING.
+              <span className="text-gradient block">DIGITAL EXECUTION.</span>
             </h2>
           </Reveal>
         </div>

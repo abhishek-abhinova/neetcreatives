@@ -1,8 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
-import CountUp from '../components/CountUp';
 import AboutVisual from '../components/AboutVisual';
-import { STATS, waLinkWithMessage } from '../data/site';
+import { waLinkWithMessage } from '../data/site';
 
 export default function About() {
   return (
@@ -39,15 +38,12 @@ export default function About() {
             </a>
           </Reveal>
 
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {STATS.map((s, i) => (
-              <Reveal key={s.label} delay={0.15 + i * 0.08}>
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {['Strategy', 'Design', 'Digital', 'Growth'].map((value, i) => (
+              <Reveal key={value} delay={0.15 + i * 0.08}>
                 <div className="card-border-glow rounded-2xl bg-ink-800/60 p-4 text-center backdrop-blur-sm">
-                  <p className="font-display text-2xl font-bold text-gradient sm:text-3xl">
-                    <CountUp value={s.value} suffix={s.suffix} />
-                  </p>
-                  <p className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-white/45">
-                    {s.label}
+                  <p className="font-display text-sm font-bold uppercase tracking-[0.12em] text-gradient">
+                    {value}
                   </p>
                 </div>
               </Reveal>

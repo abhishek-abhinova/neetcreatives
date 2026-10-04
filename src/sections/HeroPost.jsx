@@ -1,59 +1,58 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight, Check, TrendingUp, Palette, Target, Monitor, Share2 } from 'lucide-react';
-import { SERVICES } from '../data/site';
-import { waLinkWithMessage } from '../data/site';
+import Reveal from '../components/Reveal';
+
+const JOURNEY = ['IDEA', 'DESIGN', 'DIGITAL PRESENCE', 'GROWTH'];
 
 export default function HeroPost() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="noise relative py-24 lg:py-32">
+    <section className="noise relative overflow-hidden py-24 lg:py-32" aria-labelledby="statement-title">
       <div className="absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
       <div className="container-x">
-        <div className="mx-auto max-w-2xl text-center">
-          {/* Trust Line */}
-          <p className="section-tag mb-6 inline-block">
-            <span className="h-2 w-2 rounded-full bg-violet-400" />
-            Web Design • Graphic Design • Social Media • Meta Ads
-          </p>
+        <div className="mx-auto max-w-5xl text-center">
+          <Reveal>
+            <span className="section-tag">We don't just make things look good.</span>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2
+              id="statement-title"
+              className="mt-7 font-display text-4xl font-bold leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl"
+            >
+              WE MAKE DIGITAL
+              <span className="block">EXPERIENCES THAT</span>
+              <span className="text-gradient">MOVE BUSINESSES.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/50 sm:text-base">
+              One connected journey from the first idea to a stronger digital presence.
+            </p>
+          </Reveal>
+        </div>
 
-          <p className="text-white/50 text-sm leading-relaxed mb-10">
-            Serving businesses in Garhwa, Jharkhand & beyond.
-          </p>
-
-          {/* Services Preview Cards */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {SERVICES.slice(0, 4).map((service, i) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="glass rounded-2xl p-5 shadow-card backdrop-blur-sm hover:-translate-y-1.5 hover:shadow-glow transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-violet-500/20 to-cyan-400/20 text-violet-300">
-                    {service.id === 'website-design' && <Monitor size={20} />}
-                    {service.id === 'graphic-design' && <Palette size={20} />}
-                    {service.id === 'social-media' && <Share2 size={20} />}
-                    {service.id === 'meta-ads' && <Target size={20} />}
-                  </span>
-                  <span className="font-display text-sm font-medium tracking-tight">{service.title}</span>
-                </div>
-                <p className="text-white/50 text-[11px] leading-relaxed">{service.description}</p>
-                <a
-                  href={waLinkWithMessage(`Hello Neet Creatives! I'm interested in ${service.title}.`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1 text-[10px] font-semibold text-violet-300 transition-colors hover:text-white"
-                >
-                  Build My Website
-                  <ArrowUpRight size={12} />
-                </a>
-              </motion.div>
-            ))}
-          </div>
+        <div className="relative mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5">
+          <div
+            className="absolute left-[12%] right-[12%] top-1/2 hidden h-px bg-gradient-to-r from-violet-500/0 via-cyan-300/50 to-violet-500/0 sm:block"
+            aria-hidden="true"
+          />
+          {JOURNEY.map((item, index) => (
+            <motion.div
+              key={item}
+              initial={{ opacity: 0, y: reduce ? 0 : 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.55, delay: index * 0.1 }}
+              className="glass relative rounded-2xl px-4 py-5 text-center shadow-card"
+            >
+              <span className="font-display text-[10px] font-semibold tracking-[0.22em] text-cyan-200/60">
+                0{index + 1}
+              </span>
+              <p className="mt-2 font-display text-xs font-bold tracking-[0.12em] text-white sm:text-sm">
+                {item}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

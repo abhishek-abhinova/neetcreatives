@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { NAV_LINKS, waLinkWithMessage } from '../data/site';
+import { NAV_LINKS } from '../data/site';
 import navLogo from '../assets/navlogo.png';
 
 function Logo() {
@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -80, opacity: 0 }}
+        initial={reduce ? false : { y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
@@ -63,9 +63,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3">
             <a
-              href={waLinkWithMessage("Hello Neet Creatives! I'd like to get a quote.")}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#project-builder"
               className="btn-primary hidden !px-6 !py-2.5 md:inline-flex"
               aria-label="Get a Quote"
             >
@@ -119,9 +117,8 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <a
-                href={waLinkWithMessage("Hello Neet Creatives! I'd like to get a quote.")}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#project-builder"
+                onClick={() => setOpen(false)}
                 className="btn-primary mt-8 w-full"
               >
                 Get a Quote

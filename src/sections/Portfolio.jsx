@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Reveal from '../components/Reveal';
 import ProjectVisual, { ProjectOverlay } from '../components/ProjectVisual';
 import { PROJECTS, PROJECT_CATEGORIES, waLinkWithMessage } from '../data/site';
 
 export default function Portfolio() {
   const [filter, setFilter] = useState('all');
-  const reduce = useReducedMotion();
   const visible = PROJECTS.filter((p) => filter === 'all' || p.categoryKey === filter);
 
   return (
@@ -19,10 +18,16 @@ export default function Portfolio() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
-              CREATIVE WORK THAT <span className="text-gradient">SPEAKS LOUDER.</span>
+              WORK THAT <span className="text-gradient">SPEAKS LOUDER.</span>
             </h2>
           </Reveal>
         </div>
+
+        <Reveal delay={0.15}>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-white/55">
+            A glimpse into what we can create for your brand.
+          </p>
+        </Reveal>
 
         <Reveal delay={0.2}>
           <div className="mt-10 flex flex-wrap justify-center gap-2.5" role="tablist" aria-label="Filter projects">
@@ -68,7 +73,7 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
-                  aria-label={`View project ${project.name}`}
+                  aria-label={`Discuss the ${project.name}`}
                 >
                   <div
                     className="relative transition-transform duration-500 ease-out group-hover:-translate-y-2"

@@ -12,9 +12,11 @@ import AboutViz from './sections/AboutViz';
 import About from './sections/About';
 import Portfolio from './sections/Portfolio';
 import Showcase from './sections/Showcase';
+import CampaignShowcase from './sections/CampaignShowcase';
 import Pricing from './sections/Pricing';
+import ProjectBuilder from './sections/ProjectBuilder';
 import Process from './sections/Process';
-import Testimonials from './sections/Testimonials';
+import Manifesto from './sections/Manifesto';
 import FAQ from './sections/FAQ';
 import CTA from './sections/CTA';
 import Contact from './sections/Contact';
@@ -40,12 +42,14 @@ export default function App() {
         <About />
         <Portfolio />
         <Showcase />
+        <CampaignShowcase />
         <Pricing />
+        <ProjectBuilder />
         <Process />
-        <Testimonials />
+        <Manifesto />
         <FAQ />
-        <CTA />
         <Contact />
+        <CTA />
       </main>
       <Footer />
       <WhatsAppFloat />

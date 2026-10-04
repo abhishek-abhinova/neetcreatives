@@ -18,7 +18,7 @@ export default function Footer() {
             <img src={logo} alt="Neet Creatives logo" className="h-12 w-auto object-contain" />
           </a>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/50">
-            Creative ideas. Digital experiences. Business growth.
+            Creative Ideas • Digital Experiences • Business Growth
           </p>
           <a
             href={WHATSAPP_LINK}

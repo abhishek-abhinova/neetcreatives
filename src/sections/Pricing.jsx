@@ -16,13 +16,13 @@ export default function Pricing() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
-              SIMPLE PRICING.
-              <span className="text-gradient block">POWERFUL DIGITAL SERVICES.</span>
+              SIMPLE STARTING PRICES.
+              <span className="text-gradient block">CUSTOM SOLUTIONS.</span>
             </h2>
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {PRICING.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -90,8 +90,7 @@ export default function Pricing() {
 
         <Reveal delay={0.2}>
           <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-white/40">
-            Starting prices are indicative and may vary depending on project scope, number of
-            pages, features, content requirements and advertising budget.
+            Starting prices vary according to requirements. Meta advertising spend is separate.
           </p>
         </Reveal>
       </div>

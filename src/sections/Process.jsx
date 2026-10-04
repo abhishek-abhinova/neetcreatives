@@ -1,9 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { Compass, PenTool, Rocket, TrendingUp } from 'lucide-react';
+import { Compass, Target, PenTool, Rocket, TrendingUp } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import { PROCESS_STEPS } from '../data/site';
 
-const ICONS = [Compass, PenTool, Rocket, TrendingUp];
+const ICONS = [Compass, Target, PenTool, Rocket, TrendingUp];
 
 export default function Process() {
   const reduce = useReducedMotion();
@@ -17,7 +17,7 @@ export default function Process() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
-              FROM IDEA <span className="text-gradient">TO LAUNCH.</span>
+              FROM IDEA <span className="text-gradient">TO GROWTH.</span>
             </h2>
           </Reveal>
         </div>
@@ -27,20 +27,20 @@ export default function Process() {
             className="absolute left-[27px] top-0 h-full w-px bg-gradient-to-b from-violet-500/60 via-blue-500/40 to-cyan-400/50 lg:left-0 lg:top-[27px] lg:h-px lg:w-full lg:bg-gradient-to-r"
             aria-hidden="true"
           />
-          <div className="grid gap-10 lg:grid-cols-4 lg:gap-6">
+          <div className="grid gap-10 lg:grid-cols-5 lg:gap-6">
             {PROCESS_STEPS.map((step, i) => {
               const Icon = ICONS[i];
               return (
                 <motion.div
                   key={step.index}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={reduce ? false : { opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] }}
                   className="relative pl-16 lg:pl-0 lg:pt-16"
                 >
                   <motion.div
-                    initial={{ scale: 0 }}
+                    initial={reduce ? false : { scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 + i * 0.15, type: 'spring', stiffness: 260, damping: 16 }}

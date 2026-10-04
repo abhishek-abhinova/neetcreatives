@@ -23,7 +23,7 @@ export default function WhatsAppFloat() {
       className="group fixed bottom-24 right-4 z-50 sm:bottom-7 sm:right-7"
     >
       <span className="pointer-events-none absolute right-full mr-4 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full glass-strong px-4 py-2 text-xs font-medium text-white/85 opacity-0 shadow-card transition-all duration-300 group-hover:opacity-100 group-hover:-translate-x-1">
-        Chat with Neet Creatives
+        Chat on WhatsApp
       </span>
       <span className="relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_10px_36px_-8px_rgba(37,211,102,0.7)] transition-transform duration-300 group-hover:scale-110 sm:h-16 sm:w-16">
         {!reduce && (

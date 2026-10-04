@@ -33,8 +33,8 @@ function PhoneMockup() {
       <div className="relative flex h-full flex-col overflow-hidden rounded-[1.9rem] bg-gradient-to-b from-ink-700 to-ink-900">
         <div className="flex items-center justify-between px-5 pt-10">
           <div>
-            <p className="text-[10px] text-white/40">Good morning</p>
-            <p className="text-sm font-semibold">Neet Store</p>
+            <p className="text-[10px] text-white/40">Illustrative interface</p>
+            <p className="text-sm font-semibold">Growth Dashboard</p>
           </div>
           <div className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-cyan-400 text-[10px] font-bold">
             N
@@ -42,8 +42,8 @@ function PhoneMockup() {
         </div>
 
         <div className="mx-4 mt-4 rounded-2xl bg-gradient-to-br from-violet-600/80 to-blue-600/80 p-3.5">
-          <p className="text-[10px] text-white/70">Monthly Revenue</p>
-          <p className="mt-0.5 font-display text-xl font-bold">₹1,24,500</p>
+          <p className="text-[10px] text-white/70">Sample reach</p>
+          <p className="mt-0.5 font-display text-xl font-bold">4.8K</p>
           <div className="mt-2 flex items-end gap-1" aria-hidden="true">
             {[35, 55, 40, 70, 52, 85, 64, 95].map((h, i) => (
               <div
@@ -57,9 +57,9 @@ function PhoneMockup() {
 
         <div className="mx-4 mt-3 flex gap-2.5">
           {[
-            { icon: Heart, label: '1.2k', color: 'text-rose-400' },
-            { icon: MessageCircle, label: '348', color: 'text-cyan-400' },
-            { icon: Share2, label: '96', color: 'text-violet-400' },
+          { icon: Heart, label: '8.2%', color: 'text-rose-400' },
+          { icon: MessageCircle, label: '126', color: 'text-cyan-400' },
+          { icon: Share2, label: '+12%', color: 'text-violet-400' },
           ].map(({ icon: Icon, label, color }) => (
             <div
               key={label}
@@ -72,7 +72,7 @@ function PhoneMockup() {
         </div>
 
         <div className="mx-4 mt-3 space-y-2">
-          {['New order received', 'Post published', 'Lead from Meta Ads'].map((t, i) => (
+          {['Engagement overview', 'Content preview', 'Enquiry pathway'].map((t, i) => (
             <div key={t} className="flex items-center gap-2.5 rounded-xl bg-white/[0.04] px-3 py-2.5">
               <span
                 className={`h-1.5 w-1.5 rounded-full ${
@@ -108,12 +108,12 @@ function AnalyticsCard() {
             <BarChart3 size={15} />
           </span>
           <div>
-            <p className="text-[10px] text-white/40">Analytics</p>
-            <p className="text-xs font-semibold">Growth</p>
+            <p className="text-[10px] text-white/40">Illustrative</p>
+            <p className="text-xs font-semibold">Analytics UI</p>
           </div>
         </div>
         <span className="flex items-center gap-1 rounded-full bg-emerald-400/10 px-2 py-0.5 text-[10px] font-semibold text-emerald-300">
-          <TrendingUp size={11} /> +48%
+          <TrendingUp size={11} /> Demo
         </span>
       </div>
       <div className="mt-3 flex h-16 items-end gap-1.5" aria-hidden="true">
@@ -140,14 +140,14 @@ function AdCard() {
         </span>
         <div>
           <p className="text-[10px] text-white/40">Meta Ads</p>
-          <p className="text-xs font-semibold">Campaign Live</p>
+          <p className="text-xs font-semibold">Campaign preview</p>
         </div>
         <span className="ml-auto h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
       </div>
       <div className="mt-3 space-y-2">
         {[
-          { label: 'Reach', value: '42.5K' },
-          { label: 'Leads', value: '318' },
+          { label: 'Sample reach', value: '28.4K' },
+          { label: 'Sample leads', value: '186' },
         ].map((row) => (
           <div key={row.label} className="flex items-center justify-between rounded-lg bg-white/[0.04] px-3 py-2">
             <span className="text-[10px] text-white/45">{row.label}</span>
@@ -174,7 +174,7 @@ function DesignCard() {
             <span key={c} className={`h-5 w-5 rounded-full ${c} ring-2 ring-ink-800`} />
           ))}
         </div>
-        <span className="text-[9px] text-white/40">2.4k likes</span>
+        <span className="text-[9px] text-white/40">Creative preview</span>
       </div>
     </div>
   );
@@ -204,7 +204,7 @@ function VideoCard() {
           <Play size={15} fill="currentColor" className="ml-0.5 text-white" />
         </span>
       </div>
-      <p className="mt-2.5 text-[10px] font-semibold">Reel · 1.8M views</p>
+      <p className="mt-2.5 text-[10px] font-semibold">Reel concept</p>
     </div>
   );
 }
@@ -245,6 +245,9 @@ export default function HeroScene() {
       className="perspective-1200 relative mx-auto hidden h-[560px] w-full max-w-[560px] select-none sm:block lg:h-[620px]"
       aria-hidden="true"
     >
+      <span className="absolute bottom-1 left-1/2 z-20 -translate-x-1/2 rounded-full border border-white/10 bg-ink-950/70 px-3 py-1.5 text-[9px] font-medium uppercase tracking-[0.16em] text-white/50 backdrop-blur">
+        Illustrative UI · sample data
+      </span>
       <div className="absolute inset-0 grid place-items-center">
         <div className="absolute h-72 w-72 rounded-full bg-violet-600/25 blur-[100px]" />
         <div className="absolute h-56 w-56 translate-x-16 translate-y-10 rounded-full bg-cyan-500/20 blur-[90px]" />

@@ -34,7 +34,7 @@ export const SERVICES = [
     title: 'Website Design',
     description:
       'Modern, responsive and conversion-focused websites designed to make your business look professional online.',
-    price: 'Starting from ₹7,999',
+    price: 'Starting from ₹7,999+',
     features: [
       'Responsive design',
       'Modern UI/UX',
@@ -53,7 +53,7 @@ export const SERVICES = [
     title: 'Graphic Design',
     description:
       'Eye-catching designs that make your brand recognizable across digital and print platforms.',
-    price: 'Starting from ₹499',
+    price: 'Starting from ₹499+',
     features: [
       'Social media posts',
       'Posters',
@@ -72,7 +72,7 @@ export const SERVICES = [
     title: 'Social Media Management',
     description:
       'Consistent, creative and strategic content management to keep your brand active and visible.',
-    price: 'Starting from ₹4,999/month',
+    price: 'Starting from ₹4,999/month+',
     features: [
       'Content planning',
       'Creative posts',
@@ -92,7 +92,7 @@ export const SERVICES = [
     title: 'Meta Ads',
     description:
       'Targeted advertising campaigns designed to help businesses reach the right audience and generate enquiries.',
-    price: 'Starting from ₹2,999/month',
+    price: 'Starting from ₹2,999/month+',
     note: 'Ad spend is separate.',
     features: [
       'Campaign setup',
@@ -106,108 +106,117 @@ export const SERVICES = [
     ],
     cta: 'Launch My Ads',
   },
+  {
+    id: 'digital-marketing',
+    icon: 'chart',
+    title: 'Digital Marketing',
+    description:
+      'A joined-up digital plan that brings your website, content and campaigns together around your business goals.',
+    price: 'Custom quote',
+    features: [
+      'Digital strategy',
+      'Channel planning',
+      'Creative direction',
+      'Campaign coordination',
+    ],
+    cta: 'Discuss My Business',
+  },
 ];
 
 export const SPECIALTIES = [
-  { index: '01', title: 'Websites', desc: 'Fast, responsive sites that convert visitors into customers.' },
-  { index: '02', title: 'Social Media', desc: 'Content and strategy that keeps your brand visible daily.' },
-  { index: '03', title: 'Creative Design', desc: 'Graphics and visuals that make your brand recognizable.' },
-  { index: '04', title: 'Meta Ads', desc: 'Targeted campaigns that put you in front of the right people.' },
-  { index: '05', title: 'Brand Growth', desc: 'Data-driven marketing that turns attention into revenue.' },
+  { index: '01', title: 'Website', desc: 'A clear, useful home for your business online.' },
+  { index: '02', title: 'Social Media', desc: 'A consistent presence built around your audience.' },
+  { index: '03', title: 'Content', desc: 'Visual stories that give your brand a distinct voice.' },
+  { index: '04', title: 'Advertising', desc: 'Campaigns designed to reach relevant audiences.' },
+  { index: '05', title: 'Customers', desc: 'Simple paths from discovery to enquiry.' },
+  { index: '06', title: 'Growth', desc: 'Connected digital work shaped around your goals.' },
 ];
 
 export const WHY_US = [
   {
     icon: 'sparkles',
-    title: 'Creative First',
-    desc: 'We combine strategy with strong visual design to make your brand stand out.',
-  },
-  {
-    icon: 'briefcase',
-    title: 'Business Focused',
-    desc: 'Our work is designed around your business goals, not just aesthetics.',
-  },
-  {
-    icon: 'smartphone',
-    title: 'Mobile First',
-    desc: "Every website and creative is optimized for today's mobile-first audience.",
-  },
-  {
-    icon: 'wallet',
-    title: 'Affordable',
-    desc: 'Professional digital services without agency-level complexity or unnecessary costs.',
+    title: 'Creative-First',
+    desc: 'Design that captures attention and gives your brand a clear point of view.',
   },
   {
     icon: 'zap',
     title: 'Fast Execution',
-    desc: 'We focus on clear communication and efficient project delivery.',
+    desc: 'Focused project delivery with clear priorities and practical next steps.',
   },
   {
-    icon: 'map-pin',
-    title: 'Local Understanding',
-    desc: 'Based in Garhwa, Jharkhand, we understand the needs of local businesses and growing brands.',
+    icon: 'sparkles',
+    title: 'Modern Technology',
+    desc: 'Modern design and development practices, chosen to fit your project.',
   },
-];
-
-export const STATS = [
-  { value: 50, suffix: '+', label: 'Creative Projects' },
-  { value: 25, suffix: '+', label: 'Businesses Served' },
-  { value: 4, suffix: '+', label: 'Core Digital Services' },
-  { value: 100, suffix: '%', label: 'Creative Focus' },
+  {
+    icon: 'smartphone',
+    title: 'Mobile-First',
+    desc: "Digital experiences made for today's mobile audience.",
+  },
+  {
+    icon: 'briefcase',
+    title: 'Business Focused',
+    desc: 'Design and marketing planned around meaningful business goals.',
+  },
+  {
+    icon: 'message-circle',
+    title: 'Direct Communication',
+    desc: 'Talk directly with the team and keep project communication straightforward.',
+  },
 ];
 
 export const PROJECTS = [
   {
     id: 1,
-    name: 'Sharma General Store',
+    name: 'Local Retail Website Concept',
     category: 'Web Design',
     categoryKey: 'web',
-    description: 'A modern business website with WhatsApp ordering for a local Garhwa store.',
+    description: 'A sample direction for a responsive local-business website with a WhatsApp enquiry path.',
     gradient: 'from-violet-600 via-indigo-600 to-blue-600',
     accent: '#7C5CFF',
   },
   {
     id: 2,
-    name: 'Jharkhand Handicrafts',
+    name: 'Artisan Brand Design Concept',
     category: 'Graphic Design',
     categoryKey: 'graphic',
-    description: 'Social media creatives and festive campaign banners for an artisan brand.',
+    description: 'A sample visual identity and social campaign direction for an artisan brand.',
     gradient: 'from-fuchsia-600 via-purple-600 to-violet-600',
     accent: '#C026D3',
   },
   {
     id: 3,
-    name: 'FitLife Gym',
+    name: 'Fitness Social Concept',
     category: 'Social Media',
     categoryKey: 'social',
-    description: '30-day content system with reels creatives and audience growth strategy.',
+    description: 'A sample social content direction with post and reel creative ideas.',
     gradient: 'from-cyan-500 via-sky-600 to-blue-700',
     accent: '#22D3EE',
   },
   {
     id: 4,
-    name: 'City Motors',
+    name: 'Automotive Ads Concept',
     category: 'Ads',
     categoryKey: 'ads',
-    description: 'Lead-generation Meta Ads campaign for a dealership targeting Garhwa district.',
+    description: 'A sample Meta Ads campaign layout for a local automotive business.',
     gradient: 'from-blue-600 via-indigo-600 to-violet-700',
     accent: '#3B82F6',
   },
   {
     id: 5,
-    name: 'Sunrise Bakery',
+    name: 'Bakery Website Concept',
     category: 'Web Design',
     categoryKey: 'web',
-    description: 'Warm, appetizing bakery website with online menu and order-on-WhatsApp flow.',
+    description: 'A sample bakery website direction with a menu and WhatsApp contact path.',
     gradient: 'from-amber-500 via-orange-600 to-rose-600',
     accent: '#F59E0B',
   },
   {
     id: 6,
-    name: 'TechSprint Solutions',
+    name: 'B2B Campaign Concept',
     category: 'Ads',
     categoryKey: 'ads',
-    description: 'B2B service ads on Facebook and Instagram with landing page optimization.',
+    description: 'A sample B2B campaign direction across social ads and a landing page.',
     gradient: 'from-emerald-500 via-teal-600 to-cyan-700',
     accent: '#10B981',
   },
@@ -215,18 +224,18 @@ export const PROJECTS = [
 
 export const PROJECT_CATEGORIES = [
   { key: 'all', label: 'All' },
-  { key: 'web', label: 'Web Design' },
-  { key: 'graphic', label: 'Graphic Design' },
-  { key: 'social', label: 'Social Media' },
+  { key: 'web', label: 'Websites' },
+  { key: 'graphic', label: 'Design' },
+  { key: 'social', label: 'Social' },
   { key: 'ads', label: 'Ads' },
 ];
 
 export const PRICING = [
   {
-    name: 'Starter Website',
+    name: 'Website',
     price: '₹7,999+',
     period: '',
-    tagline: 'Best for small businesses and individuals.',
+    tagline: 'A professional, responsive home for your business.',
     features: [
       '1 responsive website',
       'Up to 5 pages',
@@ -240,7 +249,21 @@ export const PRICING = [
     featured: false,
   },
   {
-    name: 'Social Boost',
+    name: 'Graphic Design',
+    price: '₹499+',
+    period: '',
+    tagline: 'Distinctive creative for your brand and campaigns.',
+    features: [
+      'Social media creative',
+      'Promotional graphics',
+      'Brand-aligned layouts',
+      'Digital and print options',
+    ],
+    cta: 'Get a Design',
+    featured: false,
+  },
+  {
+    name: 'Social Media',
     price: '₹4,999/month+',
     period: '',
     tagline: 'Keep your brand active and visible online.',
@@ -270,12 +293,12 @@ export const PRICING = [
       'Monitoring',
       'Optimization',
     ],
-    note: 'Ad budget not included',
+    note: 'Advertising spend is separate.',
     cta: 'Start Advertising',
     featured: true,
   },
   {
-    name: 'Custom Growth',
+    name: 'Custom',
     price: "Let's Talk",
     period: '',
     tagline: 'For businesses requiring multiple services.',
@@ -300,45 +323,23 @@ export const PROCESS_STEPS = [
   },
   {
     index: '02',
-    title: 'Create',
-    desc: 'We develop the creative direction, design and strategy.',
+    title: 'Strategize',
+    desc: 'We plan a digital solution around your business and audience.',
   },
   {
     index: '03',
-    title: 'Launch',
-    desc: 'We build, publish and launch your digital presence.',
+    title: 'Create',
+    desc: 'We design and build the agreed digital experience.',
   },
   {
     index: '04',
+    title: 'Launch',
+    desc: 'We help put your brand and campaign online.',
+  },
+  {
+    index: '05',
     title: 'Grow',
-    desc: 'We optimize your content, social presence and advertising.',
-  },
-];
-
-export const TESTIMONIALS = [
-  {
-    name: 'Rohit Sharma',
-    business: 'Sharma General Store, Garhwa',
-    text: 'Neet Creatives built our website in just one week. Customers now find us on Google and order directly on WhatsApp. Highly recommended for local businesses.',
-    rating: 5,
-  },
-  {
-    name: 'Priya Verma',
-    business: 'Jharkhand Handicrafts',
-    text: 'The social media designs they create for our brand are beautiful and professional. Our page engagement has grown noticeably within two months.',
-    rating: 5,
-  },
-  {
-    name: 'Amit Kumar',
-    business: 'FitLife Gym',
-    text: 'Their Meta Ads campaign brought in real enquiries, not just likes. Clear reporting and honest communication throughout.',
-    rating: 5,
-  },
-  {
-    name: 'Sneha Devi',
-    business: 'Sunrise Bakery',
-    text: 'From posters to our website, everything was handled professionally. Affordable pricing and great creative quality.',
-    rating: 4,
+    desc: 'We review, optimize and improve the digital work.',
   },
 ];
 

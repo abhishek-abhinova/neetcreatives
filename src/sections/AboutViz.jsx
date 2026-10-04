@@ -1,6 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { Laptop, Smartphone, Monitor, TrendingUp, Palette, Target } from 'lucide-react';
-import { STATS } from '../data/site';
 
 export default function AboutViz() {
   const reduce = useReducedMotion();
@@ -36,7 +35,7 @@ export default function AboutViz() {
           {items.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30, rotateX: 12 }}
+              initial={reduce ? false : { opacity: 0, y: 30, rotateX: 12 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -54,15 +53,6 @@ export default function AboutViz() {
           ))}
         </div>
 
-        {/* Stats row */}
-        <div className="mt-12 grid grid-cols-2 gap-4">
-          {STATS.map((s) => (
-            <div key={s.label} className="glass rounded-2xl bg-ink-800/60 p-4 text-center backdrop-blur-sm">
-              <p className="font-display text-2xl font-bold text-gradient">{s.value}{s.suffix}</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-white/45">{s.label}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

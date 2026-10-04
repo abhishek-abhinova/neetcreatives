@@ -13,12 +13,12 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
-              DIGITAL SERVICES THAT <span className="text-gradient">MOVE YOUR BRAND FORWARD.</span>
+              EVERYTHING YOUR BRAND NEEDS TO <span className="text-gradient">GROW.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-5 text-[15px] leading-relaxed text-white/55">
-              Everything you need to look better, reach more people and grow online.
+              One creative partner for your website, content, social presence and advertising.
             </p>
           </Reveal>
         </div>

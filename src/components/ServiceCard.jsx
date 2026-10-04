@@ -7,6 +7,7 @@ import {
   Target,
   Check,
   ArrowUpRight,
+  TrendingUp,
 } from 'lucide-react';
 import { waLinkWithMessage } from '../data/site';
 
@@ -15,6 +16,7 @@ const ICONS = {
   palette: Palette,
   share: Share2,
   target: Target,
+  chart: TrendingUp,
 };
 
 export default function ServiceCard({ service, index }) {

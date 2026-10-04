@@ -1,13 +1,13 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { Zap, Smartphone, Layout, MousePointerClick, ArrowRight } from 'lucide-react';
+import { Zap, Smartphone, Layout, SearchCheck, MessageCircle, ArrowRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
-import { waLinkWithMessage } from '../data/site';
 
 const LABELS = [
   { icon: Smartphone, text: 'Responsive', pos: 'left-2 top-10', delay: 0 },
   { icon: Zap, text: 'Fast', pos: 'right-2 top-24', delay: 1.2 },
   { icon: Layout, text: 'Modern', pos: 'left-4 bottom-24', delay: 2.1 },
-  { icon: MousePointerClick, text: 'Conversion-focused', pos: 'right-4 bottom-10', delay: 0.6 },
+  { icon: SearchCheck, text: 'SEO ready', pos: 'left-1/2 -translate-x-1/2 -top-6', delay: 1.7 },
+  { icon: MessageCircle, text: 'WhatsApp enabled', pos: 'right-4 bottom-10', delay: 0.6 },
 ];
 
 function BrowserMockup() {
@@ -96,10 +96,17 @@ export default function Showcase() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
-              YOUR WEBSITE IS YOUR <span className="text-gradient">DIGITAL SHOWROOM.</span>
+              YOUR WEBSITE
+              <span className="text-gradient block">IS YOUR DIGITAL SHOWROOM.</span>
             </h2>
           </Reveal>
         </div>
+
+        <Reveal delay={0.15}>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-white/55 sm:text-base">
+            Make your first impression count with a modern website designed around your business.
+          </p>
+        </Reveal>
 
         <div className="relative mt-16">
           {LABELS.map((label) => {
@@ -123,12 +130,10 @@ export default function Showcase() {
 
         <Reveal delay={0.2} className="mt-16 text-center">
           <a
-            href={waLinkWithMessage("Hello Neet Creatives! I'd like a website like this for my business.")}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#project-builder"
             className="btn-primary group"
           >
-            Start a Similar Project
+            Get Website Quote
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </Reveal>

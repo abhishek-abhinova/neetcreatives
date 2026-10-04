@@ -66,7 +66,7 @@ export function ProjectOverlay({ project }) {
           {project.description}
         </p>
         <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-white">
-          View Project
+          Discuss Concept
           <ArrowUpRight size={13} className="text-violet-300" />
         </span>
       </div>
